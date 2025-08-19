@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Result{% endblock %}
+{% block content %}
+    <h1>Your Stylized Image</h1>
+    <img src="{{ url_for('send_output', filename=filename) }}" alt="Styled Image" class="styled-img">
+    <br>
+    <a class="btn" href="{{ url_for('upload') }}">Try Another</a>
+{% endblock %}

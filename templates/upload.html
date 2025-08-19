@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Upload{% endblock %}
+{% block content %}
+    <h1>Upload Your Content Image</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="style">Select Style:</label>
+        <select name="style" required>
+            {% for style in styles %}
+            <option value="{{ style }}">{{ style }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="file" name="content_image" required>
+        <br><br>
+        <input class="btn" type="submit" value="Stylize Image">
+    </form>
+{% endblock %}
