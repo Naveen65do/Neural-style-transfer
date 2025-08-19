@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <h1>Welcome to Neural Style Transfer 🎨</h1>
+    <p>Choose a style and upload your image to transform it!</p>
+    <a class="btn" href="{{ url_for('upload') }}">Start Styling</a>
+{% endblock %}
